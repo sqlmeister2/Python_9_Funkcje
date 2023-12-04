@@ -17,16 +17,18 @@ def dodaj(x, y):
     print(x + y)
 
 dodaj(4, 7)
+
 #nie działa funkcja, która została przeciążona. Ona nie jest przeciązona tylko nadpisana...
-#dodaj(3)
+# dodaj(3)
 
 #prawidłowe dokonanie przeciążenia
 def dodaj(x, y = 1):
     print(x + y)
 
 dodaj(2, 3)
-dodaj(2)
+dodaj(2) #tu domyślnie jest pod y = 1 więc wynikiem będzie 3
 print("---")
+
 
 #funkcja z return
 def dodaj(x, y = 1, z = 0):
@@ -40,8 +42,9 @@ print(suma)
 #Przeskoczenie drugiego argumentu
 print(dodaj(2, z = 5))
 
-#można zwracać wiele wartości
+# #można zwracać wiele wartości
 def fn(a, b):
-    return a +b, a - b, a * b
+    return a + b, a - b, a * b
 #zwracana jest krotka
 print(fn(3,4))
+print(fn(3,4)[1])
